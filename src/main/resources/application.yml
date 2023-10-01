@@ -1,0 +1,12 @@
+server:
+  port: ${WEB_PORT:8082}
+
+
+application:
+  http-client:
+    evict-idle-connection-time: ${HTTP_CLIENT_EVICT_IDLE_CONNECTION_TIME:5}
+    connection-pool:
+      max-total: ${HTTP_CLIENT_CP_MAX_TOTAL:1}
+      max-per-route: ${HTTP_CLIENT_CP_MAX_PER_ROUTE:1}
+      validate-after-inactivity-period: ${HTTP_CLIENT_CP_VALIDATE_AFTER_INACTIVITY_PERIOD:1000}
+      close-idle-connections-timeout: ${HTTP_CLIENT_CP_CLOSE_IDLE_CONNECTIONS_TIMEOUT:0}
